@@ -1,4 +1,4 @@
-import Select from '../../select/Select'
+import Select from '../select/Select'
 import Button from '../button/Button'
 import Input from '../input/Input'
 
