@@ -1,17 +1,17 @@
-import InputFriend from './InputFriend'
 import style from './AddForm.module.css'
 import Button from '../button/Button'
+import Input from '../input/Input'
 
 export default function AddForm() {
   return (
     <>
       <form action="#" className={style.addForm}>
-        <InputFriend emoji="🧑‍🤝‍🧑" type="text">
+        <Input emoji="🧑‍🤝‍🧑" type="text">
           Friend name
-        </InputFriend>
-        <InputFriend emoji="🖼️" type="url">
+        </Input>
+        <Input emoji="🖼️" type="url">
           Image URL
-        </InputFriend>
+        </Input>
         <div className={style.right}>
           <Button>Add</Button>
         </div>

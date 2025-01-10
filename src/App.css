@@ -1,2 +1,4 @@
-body {
+.app {
+  display: flex;
+  align-items: start;
 }
