@@ -1,0 +1,9 @@
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  /* background-color: #f65380; */
+  /* border: 1px solid #f65380; */
+}

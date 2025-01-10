@@ -1,13 +1,7 @@
 import style from './input.module.css'
 
-export default function Input({ children, emoji, type }) {
+export default function Input({ type, id }) {
   return (
-    <div className={style.input}>
-      <label htmlFor={children}>
-        {emoji}
-        {children}
-      </label>
-      <input type={type} id={children} required />
-    </div>
+    <input className={style.input} type={type} id={id} required />
   )
 }

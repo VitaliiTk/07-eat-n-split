@@ -1,21 +1,27 @@
 import style from './AddForm.module.css'
 import Button from '../button/Button'
-import Input from '../input/Input'
+import InputWrapper from '../input-wrapper/InputWrapper'
 
 export default function AddForm() {
   return (
     <>
       <form action="#" className={style.addForm}>
-        <Input emoji="🧑‍🤝‍🧑" type="text">
-          Friend name
-        </Input>
-        <Input emoji="🖼️" type="url">
-          Image URL
-        </Input>
-        <div className={style.right}>
-          <Button>Add</Button>
-        </div>
+        <InputWrapper
+          emoji="🧑‍🤝‍🧑"
+          lableText="Friend name"
+          inputType="text"
+          inputId="friendName"
+        />
+        <InputWrapper
+          emoji="🖼️"
+          lableText="Image URL"
+          inputType="url"
+          inputId="imageUrl"
+        />
+
+        <Button>Add</Button>
       </form>
+
       <Button>Close</Button>
     </>
   )

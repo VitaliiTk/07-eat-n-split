@@ -1,13 +1,13 @@
+import Emoji from '../emoji/Emoji'
+import Label from '../label/Label'
 import style from './select.module.css'
 
-export default function Select({ children, emoji }) {
+export default function Select() {
   return (
     <div className={style.select}>
-      <label htmlFor="who">
-        {emoji}
-        {children}
-      </label>
-      <select name="" id="who">
+      <Emoji>🤑</Emoji>
+      <Label htmlFor="who">Who is paying the bill?</Label>
+      <select className={style['select-field']} name="" id="who">
         <option value="">You</option>
         <option value="">Friend</option>
       </select>
