@@ -1,0 +1,10 @@
+.addForm {
+  margin: 25px;
+  background-color: #772963;
+  padding: 25px;
+}
+
+.right {
+  display: flex;
+  justify-content: end;
+}
