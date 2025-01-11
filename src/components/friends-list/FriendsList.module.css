@@ -1,6 +1,7 @@
 .friends {
-  background-color: #77296442;
+  background-color: #200e3d94;
   padding: 15px;
   margin: 25px;
   border-radius: 15px;
+  backdrop-filter: blur(10px);
 }

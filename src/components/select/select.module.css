@@ -2,8 +2,6 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
-  padding: 10px;
-  /* border: 1px solid #f65380; */
 }
 
 .select-field {

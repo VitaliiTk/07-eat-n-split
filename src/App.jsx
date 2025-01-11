@@ -16,10 +16,18 @@ function App() {
 
   const [isSplitOpen, setIsSplitOpen] = useState(false)
 
+  const [curOpen, setCurOpen] = useState(null)
+
   return (
     <div className="app">
       <div className="app-inner">
-        <FriendsList friends={friends} />
+        <FriendsList
+          friends={friends}
+          setIsSplitOpen={setIsSplitOpen}
+          isSplitOpen={isSplitOpen}
+          curOpen={curOpen}
+          setCurOpen={setCurOpen}
+        />
 
         {isAddFormOpen && (
           <AddForm
@@ -32,7 +40,13 @@ function App() {
           {isAddFormOpen ? `Close` : `Add friend`}
         </Button>
       </div>
-      {isSplitOpen && <BillForm />}
+      {isSplitOpen && (
+        <BillForm
+          friend={friends.find((friend) => friend.id === curOpen)}
+          setFriends={setFriends}
+          friends={friends}
+        />
+      )}
     </div>
   )
 }

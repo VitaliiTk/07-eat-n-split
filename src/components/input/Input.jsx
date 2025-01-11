@@ -5,16 +5,35 @@ export default function Input({
   type,
   id,
   inputValue,
-  setInputValue
+  setInputValue,
+  disabled
+  // updateFriendExpense
 }) {
-  return (
-    <input
-      className={style.input}
-      type={type}
-      id={id}
-      value={inputValue}
-      onChange={(e) => setInputValue(e.target.value)}
-      required
-    />
-  )
+  if (disabled) {
+    return (
+      <input
+        className={style.input}
+        type={type}
+        id={id}
+        value={inputValue}
+        disabled
+      />
+    )
+  }
+
+  if (!disabled) {
+    return (
+      <input
+        className={style.input}
+        type={type}
+        id={id}
+        value={inputValue}
+        onChange={(e) => {
+          setInputValue(e.target.value)
+          // updateFriendExpense()
+        }}
+        required
+      />
+    )
+  }
 }

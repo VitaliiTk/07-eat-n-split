@@ -16,6 +16,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -28,12 +29,29 @@ a:hover {
 }
 
 body {
-  margin: 25px auto;
+  padding: 25px 0;
+  /* margin: 25px auto; */
   /* display: flex; */
-  place-items: center;
-  min-width: 320px;
+  /* place-items: center; */
+  /* min-width: 320px; */
   min-height: 100vh;
-  max-width: 1200px;
+  /* max-width: 1200px; */
+
+  background-image: url('/public/bg-image.jpg');
+  position: relative;
+  z-index: 0;
+}
+
+body:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #000000d8;
+  /* backdrop-filter: blur(5px); */
 }
 
 h1 {

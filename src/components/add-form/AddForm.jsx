@@ -13,14 +13,21 @@ export default function AddForm({ setFriends, setIsAddFormOpen }) {
 
     const newFriend = {
       id: Math.floor(100000 + Math.random() * 900000),
-      name: inputValueName,
+      name: convertFirstNameLetter(inputValueName),
       image: inputValueImage,
       balance: 0
     }
 
+    function convertFirstNameLetter(nameToConvert) {
+      const first = nameToConvert.slice(0, 1).toUpperCase()
+      const anotherLeters = nameToConvert.slice(1, nameToConvert.length)
+      const result = first + anotherLeters
+      return result
+    }
+
     setFriends((prevFriends) => [...prevFriends, newFriend])
 
-    console.log(newFriend)
+    // console.log(newFriend)
 
     setInputValueName('')
     setInputValueImage('')

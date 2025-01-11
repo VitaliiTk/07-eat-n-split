@@ -10,7 +10,9 @@ export default function InputWrapper({
   inputType,
   inputId,
   inputValue,
-  setInputValue
+  setInputValue,
+  disabled
+  // updateFriendExpense
 }) {
   return (
     <div className={styles['input-wrapper']}>
@@ -21,6 +23,8 @@ export default function InputWrapper({
         id={inputId}
         inputValue={inputValue}
         setInputValue={setInputValue}
+        disabled={disabled}
+        // updateFriendExpense={updateFriendExpense}
       />
     </div>
   )

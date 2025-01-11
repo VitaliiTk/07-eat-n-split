@@ -1,5 +1,14 @@
 .bill-form {
-  background-color: #772963;
+  background-color: #be07918e;
   padding: 25px;
   margin: 25px;
+
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+
+  /* Размытие */
+  backdrop-filter: blur(5px); /* Интенсивность размытия */
 }
