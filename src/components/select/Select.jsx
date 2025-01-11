@@ -9,7 +9,7 @@ export default function Select() {
       <Label htmlFor="who">Who is paying the bill?</Label>
       <select className={style['select-field']} name="" id="who">
         <option value="">You</option>
-        <option value="">Friend</option>
+        <option value="">Friend name</option>
       </select>
     </div>
   )

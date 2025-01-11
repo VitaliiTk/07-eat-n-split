@@ -1,18 +1,17 @@
+import Title from '../title/Title'
 import Friend from './Friend/Friend'
 import style from './FriendsList.module.css'
 
-// data
-import friends from '../../friendsData'
-
-export default function FriendsList() {
+export default function FriendsList({ friends }) {
   return (
     <ul className={style.friends}>
+      <Title>Friends</Title>
       {friends.map((friend) => (
         <Friend
-          key={friend.name}
+          key={friend.id}
           name={friend.name}
-          photo={friend.imgSrc}
-          owe={friend.owe}
+          photo={friend.image}
+          balance={friend.balance}
         />
       ))}
     </ul>

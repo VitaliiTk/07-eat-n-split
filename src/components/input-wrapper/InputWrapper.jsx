@@ -8,13 +8,20 @@ export default function InputWrapper({
   emoji,
   lableText,
   inputType,
-  inputId
+  inputId,
+  inputValue,
+  setInputValue
 }) {
   return (
     <div className={styles['input-wrapper']}>
       <Emoji>{emoji}</Emoji>
       <Label htmlFor={inputId}>{lableText}</Label>
-      <Input type={inputType} id={inputId} />
+      <Input
+        type={inputType}
+        id={inputId}
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+      />
     </div>
   )
 }
